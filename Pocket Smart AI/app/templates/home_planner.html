@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <p class="eyebrow">
+        HOME INTERIOR PLANNER
+    </p>
+
+    <h1>
+        Build a room within budget
+    </h1>
+
+    <p>
+        Add the items you need and let
+        the assistant allocate your budget.
+    </p>
+
+</div>
+
+
+<form
+    id="home-form"
+    class="card form"
+>
+
+    <div class="grid two">
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Room type
+
+            <input
+                name="room_type"
+                placeholder="Living Room"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <select name="style">
+
+                <option>
+                    Modern
+                </option>
+
+                <option>
+                    Minimalist
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Contemporary
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                value="Chennai"
+            >
+
+        </label>
+
+    </div>
+
+
+    <label>
+        Items
+    </label>
+
+
+    <div id="home-items">
+
+        <div class="item-row">
+
+            <input
+                name="item_name"
+                placeholder="Ceiling light"
+                required
+            >
+
+            <input
+                name="quantity"
+                type="number"
+                min="1"
+                value="1"
+                required
+            >
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="button secondary"
+        type="button"
+        onclick="addHomeItem()"
+    >
+        + Add item
+    </button>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate recommendations
+    </button>
+
+
+    <div
+        id="form-message"
+        class="message"
+    ></div>
+
+</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+
+setupHomePlanner();
+
+</script>
+
+{% endblock %}

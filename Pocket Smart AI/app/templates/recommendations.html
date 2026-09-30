@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recommendations · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <p class="eyebrow">
+        RECOMMENDATIONS
+    </p>
+
+    <h1>
+        Your plan
+    </h1>
+
+    <p
+        id="source-note"
+        class="muted"
+    >
+        Loading recommendation…
+    </p>
+
+</div>
+
+
+<div id="recommendation-root"></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+
+loadRecommendation(
+    {{ recommendation_id }}
+);
+
+</script>
+
+{% endblock %}

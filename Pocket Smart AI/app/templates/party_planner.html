@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <p class="eyebrow">
+        PARTY BUDGET PLANNER
+    </p>
+
+    <h1>
+        Plan the event budget
+    </h1>
+
+    <p>
+        Set the event, guests and location.
+        The assistant creates a category allocation.
+    </p>
+
+</div>
+
+
+<form
+    id="party-form"
+    class="card form"
+>
+
+    <div class="grid two">
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Guests
+
+            <input
+                type="number"
+                name="guests"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Event type
+
+            <input
+                name="event_type"
+                placeholder="Birthday"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Venue
+
+            <input
+                name="venue"
+                value="Flexible"
+            >
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                value="Chennai"
+            >
+
+        </label>
+
+
+        <label>
+
+            Preferences
+
+            <input
+                name="preferences"
+                placeholder="Vegetarian food, simple decor"
+            >
+
+        </label>
+
+    </div>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate party plan
+    </button>
+
+
+    <div
+        id="form-message"
+        class="message"
+    ></div>
+
+</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+
+setupPartyPlanner();
+
+</script>
+
+{% endblock %}

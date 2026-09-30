@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <p class="eyebrow">
+        JEWELRY BUDGET PLANNER
+    </p>
+
+    <h1>
+        Find jewelry for the occasion
+    </h1>
+
+    <p>
+        Optionally upload an outfit image
+        for multimodal style and color context.
+    </p>
+
+</div>
+
+
+<form
+    id="jewelry-form"
+    class="card form"
+    enctype="multipart/form-data"
+>
+
+    <div class="grid two">
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Occasion
+
+            <input
+                name="occasion"
+                placeholder="Wedding"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <select name="style">
+
+                <option>
+                    Elegant
+                </option>
+
+                <option>
+                    Minimal
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Statement
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Outfit color
+
+            <input
+                name="outfit_color"
+                value="Any"
+            >
+
+        </label>
+
+    </div>
+
+
+    <label>
+
+        Notes
+
+        <textarea
+            name="notes"
+            placeholder="Gold-tone, lightweight, etc."
+        ></textarea>
+
+    </label>
+
+
+    <label>
+
+        Outfit image (optional)
+
+        <input
+            type="file"
+            name="outfit_image"
+            accept=".jpg,.jpeg,.png,.webp"
+        >
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate jewelry recommendations
+    </button>
+
+
+    <div
+        id="form-message"
+        class="message"
+    ></div>
+
+</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+
+setupJewelryPlanner();
+
+</script>
+
+{% endblock %}

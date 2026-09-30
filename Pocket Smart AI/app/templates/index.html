@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <p class="eyebrow">
+            SMART BUDGET • SMART RECOMMENDATIONS
+        </p>
+
+        <h1>
+            Plan smarter.
+            Spend with confidence.
+        </h1>
+
+        <p class="lead">
+            Create budget-aware plans for
+            home interiors, parties,
+            and jewelry with AI assistance.
+        </p>
+
+        <div class="actions">
+
+            <a
+                class="button"
+                href="/home-planner"
+            >
+                Start Home Planner
+            </a>
+
+            <a
+                class="button secondary"
+                href="/party-planner"
+            >
+                Plan a Party
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="spark">
+            ✦
+        </div>
+
+        <h3>
+            One budget.
+            One clear plan.
+        </h3>
+
+        <p>
+            Gemini can interpret preferences
+            and optional jewelry outfit images.
+            A local fallback keeps the app usable
+            when AI is unavailable.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <article class="card">
+
+        <div class="icon">
+            ⌂
+        </div>
+
+        <h2>
+            Home Interior
+        </h2>
+
+        <p>
+            Allocate a room budget across
+            furniture, lighting, decor
+            and storage.
+        </p>
+
+        <a href="/home-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            ★
+        </div>
+
+        <h2>
+            Party Planner
+        </h2>
+
+        <p>
+            Plan food, venue, decoration
+            and a buffer around your
+            guest count.
+        </p>
+
+        <a href="/party-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            ◇
+        </div>
+
+        <h2>
+            Jewelry
+        </h2>
+
+        <p>
+            Get occasion and style
+            suggestions with an optional
+            outfit image.
+        </p>
+
+        <a href="/jewelry-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+</section>
+
+{% endblock %}
